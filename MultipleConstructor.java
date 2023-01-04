@@ -6,6 +6,7 @@ public class MultipleConstructor  {
     String userposition;
 
 public MultipleConstructor(String name , String place , String companyName , int Id , int age , String position){
+    this();
     username=name;
     userplace=place;
     usercompanyName=companyName;
@@ -15,6 +16,7 @@ public MultipleConstructor(String name , String place , String companyName , int
     
 }
 public MultipleConstructor() {
+System.out.println("This is default Constructor");
 }
 void displayUser(){
     System.out.println("Name: "+username);
@@ -28,11 +30,7 @@ void displayUser(){
 public static void main(String args[]){
     MultipleConstructor obj = new MultipleConstructor("Aditya", "Mumbai", "Axis", 07, 22, "It deputy Manager");
     obj.displayUser();
-    MultipleConstructor Rahul=new MultipleConstructor();
-    Rahul.userage=21;
-    Rahul.username="Rahul";
-    Rahul.usercompanyName="HDFC";
-    Rahul.displayUser();
+   
 
 }
 }
