@@ -1,11 +1,11 @@
-public class ParameterizedConstructor  {
+public class MultipleConstructor  {
     String username, userplace;
     String usercompanyName;
     int userId;
     int userage;
     String userposition;
 
-public ParameterizedConstructor(String name , String place , String companyName , int Id , int age , String position){
+public MultipleConstructor(String name , String place , String companyName , int Id , int age , String position){
     username=name;
     userplace=place;
     usercompanyName=companyName;
@@ -13,6 +13,8 @@ public ParameterizedConstructor(String name , String place , String companyName 
     userage=age;
     userposition=position;
     
+}
+public MultipleConstructor() {
 }
 void displayUser(){
     System.out.println("Name: "+username);
@@ -24,7 +26,13 @@ void displayUser(){
 }
     
 public static void main(String args[]){
-    ParameterizedConstructor obj = new ParameterizedConstructor("Aditya", "Mumbai", "Axis", 07, 22, "It deputy Manager");
+    MultipleConstructor obj = new MultipleConstructor("Aditya", "Mumbai", "Axis", 07, 22, "It deputy Manager");
     obj.displayUser();
+    MultipleConstructor Rahul=new MultipleConstructor();
+    Rahul.userage=21;
+    Rahul.username="Rahul";
+    Rahul.usercompanyName="HDFC";
+    Rahul.displayUser();
+
 }
 }
